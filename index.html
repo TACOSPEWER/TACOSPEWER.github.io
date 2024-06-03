@@ -1,0 +1,70 @@
+<!--Sets doctype to html and language to English-->
+<!DOCTYPE html>
+<html lang="en">
+	<body>
+		<head>
+			<!--determines what is shows in the tab at the top of the screen-->
+			<title>ASD Map</title>
+			<!--Links to the css stylesheet-->
+			<link rel="stylesheet" href="css/map.css"/>
+			
+			<!--Header at the top of the screen shows the topic of the page-->
+			<h1>Interactive Map</h1>
+			<!--Creates the navigation bar at the top of the page that allows user to switch between pages using hypertext links-->
+			<div class="topnav">
+				<ul>
+					<li><a class="active" href="index.html">Map</a></li>
+					<li><a href="RoomKey.html">Room Key</a></li>
+				</ul>
+			</div>
+		<!--Puts image of digital map on the page-->
+		<img src="DigitalMap.png" alt="Digital Map" height="600" class="centerimg">
+		<img src="MapGrid.png" alt="Map Grid" height="500" class="centerimg">
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		
+		<!--This part links the button to the python file via javascript and was found on https://medium.com/@brajagopal.tripathi/how-to-run-a-python-script-from-an-html-button-17058bf5dbe5 accessed on Sunday 6/2/24-->
+		
+		<script>
+		function runPythonScript() {
+		// Get the path to the Python script.
+		var pythonScriptPath = href="Python.py";
+		// Run the Python script.
+		subprocess.run(["python", pythonScriptPath]);
+		}
+		</script>
+		
+		<button class="centerimg buttons" onclick="runPythonScript()"><b>Find Path</b></button>
+		
+		<a href="PythonMap.py">
+			<button class="centerimg buttons">View Code Making This Happen</button>
+		</a>
+		
+		
+		
+		
+		
+	<!--This section has a list of parameters for the inputs for the python code-->
+	<h2>Inputs</h2>
+<ul class="ul"><li>For room numbers, capitalize mod letter with no spaces (Ex - “A105”)
+
+<li class="li">For the Theater, type “A148” or “theater”</li>
+<li>For the Robotics lab, type “A155”, “A157”, or “rob”</li>
+<li class="li">For the Gymnasium, type “B114” or “gym”</li>
+<li>For the Tefft Library, type “B137” or “tefft”</li>
+<li class="li">For the B Lobby, type “lobby”</br>
+<li>For the Directors’ Office, type “dir”</li>
+<li class="li">For the East Cafeteria, type “caf”</li>
+<li>For the Copying Room, type “copy”</li>
+<li class="li">For the Junior/Senior Area, type “jrsr”</li>
+<li>For the A Mod Bathrooms, type “abath”</li>
+<li class="li">Otherwise, refer to the key for room numbers.</li>
+</ul>
+
+		
+
+	</body>
+</html>
